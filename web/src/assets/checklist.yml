@@ -1,0 +1,142 @@
+# ===================================================================
+#  7. Community Management
+# ===================================================================
+- title: Community Management
+  slug: community-management
+  description: Protecting online communities from security threats
+  icon: community
+  color: orange
+  intro: >-
+      Communities are at the heart of many Web3 projects, but they also present significant security risks. 
+      Attackers frequently target community managers, moderators, and users through phishing, impersonation, 
+      and social engineering. A compromised account can quickly become an attack vector for broader scams. 
+      This section provides best practices to secure community platforms such as Discord, Telegram, Twitter (X), and Google.
+
+  checklist:
+      # -------------------------------
+      # General Security Practices
+      # -------------------------------
+      - point: Enforce Two-Factor Authentication (2FA)
+        priority: Essential
+        details: >-
+            Require 2FA for all administrators and moderators on community platforms. 
+            Prefer authenticator apps or security keys over SMS-based methods to prevent SIM swapping attacks.
+
+      - point: Use Unique, Strong Passwords
+        priority: Essential
+        details: >-
+            All community team members should use long, unique passwords stored in a reputable password manager. 
+            Never reuse passwords across multiple platforms.
+
+      - point: Educate Members on Phishing Attacks
+        priority: Essential
+        details: >-
+            Clearly communicate that official team members will **never** send unsolicited direct messages (DMs). 
+            Phishing attacks often impersonate admins, moderators, or support accounts.
+
+      - point: Regularly Audit Permissions and Roles
+        priority: Essential
+        details: >-
+            Frequently review and update permissions for all roles to enforce the principle of least privilege. 
+            No one should have more access than necessary.
+
+      - point: Use Cold Admin Accounts for High-Risk Actions
+        priority: Advanced
+        details: >-
+            Designate a separate **"cold" admin account** with minimal exposure for performing critical actions 
+            such as changing settings, revoking permissions, or handling security incidents.
+
+      # -------------------------------
+      # Platform-Specific Security
+      # -------------------------------
+
+      # Twitter (X)
+      - point: Remove Phone Number from Twitter
+        priority: Essential
+        details: >-
+            Attackers frequently use SIM swaps to bypass security. Go to [Phone Settings](https://x.com/settings/phone) 
+            and remove your phone number.
+
+      - point: Enable 2FA on Twitter
+        priority: Essential
+        details: >-
+            Use [Security Keys](https://x.com/settings/security) or an authenticator app instead of SMS-based 2FA.
+
+      - point: Revoke Access to Suspicious Third-Party Apps
+        priority: Essential
+        details: >-
+            Regularly check [Connected Apps](https://x.com/settings/connected_apps) and revoke unnecessary access.
+
+      # Discord
+      - point: Require 2FA for Discord Moderation
+        priority: Essential
+        details: >-
+            Enforce 2FA for all moderators in **Server Settings > Moderation** to prevent unauthorized account takeovers.
+
+      - point: Limit Administrative Privileges in Discord
+        priority: Essential
+        details: >-
+            Remove the **Administrator** permission from all non-essential roles. Set **role-based access** instead of granting blanket permissions.
+
+      - point: Implement Anti-Impersonation and Anti-Raid Bots
+        priority: Optional
+        details: >-
+            Use bots such as **Wick** or **Beemo** to prevent impersonation, raids, and automated scams.
+
+      - point: Restrict DM Access for Discord Members
+        priority: Optional
+        details: >-
+            Prevent mass phishing attacks by disabling direct messages from server members under 
+            **User Settings > Privacy & Safety**.
+
+      # Telegram
+      - point: Hide Your Phone Number in Telegram
+        priority: Essential
+        details: >-
+            Set your phone number to **Nobody** in **Settings > Privacy and Security > Phone Number** to prevent unwanted contact or social engineering.
+
+      - point: Disable Peer-to-Peer (P2P) Calling
+        priority: Optional
+        details: >-
+            Prevent IP leakage by disabling **P2P calling** under **Settings > Privacy and Security > Calls**.
+
+      - point: Use Secret Chats for Sensitive Conversations
+        priority: Optional
+        details: >-
+            Regular chats on Telegram are **not** end-to-end encrypted by default. Use **Secret Chats** for high-risk communication.
+
+      - point: Train Members on "Man-in-the-Group" Attacks
+        priority: Advanced
+        details: >-
+            Attackers can impersonate team members in Telegram by cloning groups and altering payment details. 
+            Always verify group authenticity before making transactions.
+
+      # Google
+      - point: Enable Advanced Protection for Google Accounts
+        priority: Advanced
+        details: >-
+            Enroll high-risk team members in [Google’s Advanced Protection Program](https://myaccount.google.com/advanced-protection/landing) 
+            to prevent unauthorized access.
+
+      - point: Remove Recovery Phone Number and Email
+        priority: Essential
+        details: >-
+            Reduce attack surfaces by removing recovery phone numbers and emails. **Navigate to:**  
+            - [Recovery Phone](https://myaccount.google.com/signinoptions/rescuephone)  
+            - [Recovery Email](https://myaccount.google.com/recovery/email)
+
+      - point: Monitor Active Google Sessions
+        priority: Optional
+        details: >-
+            Regularly check for unauthorized sessions under [Device Activity](https://myaccount.google.com/device-activity) 
+            and terminate unknown logins.
+
+  softwareLinks:
+      - title: Google Advanced Protection
+        url: https://myaccount.google.com/advanced-protection/landing
+      - title: Securing Twitter (X)
+        url: https://x.com/settings/security
+      - title: Discord Security Guide
+        url: https://discord.com/community/securing-your-server
+      - title: Telegram Privacy Settings
+        url: https://telegram.org/privacy
