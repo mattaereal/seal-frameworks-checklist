@@ -3,6 +3,7 @@ import { qwikVite } from "@builder.io/qwik/optimizer";
 import { qwikCity } from "@builder.io/qwik-city/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { viteStaticCopy } from 'vite-plugin-static-copy'
+import yaml from "@rollup/plugin-yaml";
 
 export default defineConfig((): UserConfig => {
   return {
@@ -17,7 +18,8 @@ export default defineConfig((): UserConfig => {
             dest: 'public'
           }
         ]
-      })
+      }),
+      yaml()
     ],
     server: {
       headers: {
