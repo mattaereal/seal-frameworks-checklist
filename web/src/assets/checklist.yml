@@ -1,10 +1,10 @@
 # ===================================================================
-#  7. Community Management
+#  1. Community Management
 # ===================================================================
 - title: Community Management
   slug: community-management
   description: Protecting online communities from security threats
-  icon: community
+  icon: social
   color: orange
   intro: >-
       Communities are at the heart of many Web3 projects, but they also present significant security risks. 
@@ -45,6 +45,18 @@
         details: >-
             Designate a separate **"cold" admin account** with minimal exposure for performing critical actions 
             such as changing settings, revoking permissions, or handling security incidents.
+            
+      - point: Establish Clear Communication Protocols
+        priority: Essential
+        details: >-
+            Define and document how official announcements will be made and through which channels.
+            Educate community members on how to verify authentic communications.
+
+      - point: Create an Incident Response Plan
+        priority: Advanced
+        details: >-
+            Develop a documented plan for responding to community security incidents including
+            account compromises, scam attacks, and impersonation attempts.
 
       # -------------------------------
       # Platform-Specific Security
@@ -115,7 +127,7 @@
       - point: Enable Advanced Protection for Google Accounts
         priority: Advanced
         details: >-
-            Enroll high-risk team members in [Google’s Advanced Protection Program](https://myaccount.google.com/advanced-protection/landing) 
+            Enroll high-risk team members in [Google's Advanced Protection Program](https://myaccount.google.com/advanced-protection/landing) 
             to prevent unauthorized access.
 
       - point: Remove Recovery Phone Number and Email
@@ -140,3 +152,136 @@
         url: https://discord.com/community/securing-your-server
       - title: Telegram Privacy Settings
         url: https://telegram.org/privacy
+
+# ===================================================================
+#  2. Security Awareness
+# ===================================================================
+- title: Security Awareness
+  slug: security-awareness
+  description: Building a security-conscious culture through education and training
+  icon: human
+  color: teal
+  intro: >-
+      Security awareness is a critical component of any comprehensive security strategy. 
+      Even the most robust technical controls can be undermined by human error or lack of knowledge.
+      This section outlines best practices for developing and maintaining a security-conscious culture
+      through education, training, and ongoing awareness initiatives.
+
+  checklist:
+      # -------------------------------
+      # Training and Education
+      # -------------------------------
+      - point: Implement Regular Security Training
+        priority: Essential
+        details: >-
+            Conduct mandatory security awareness training for all team members at onboarding and at regular intervals.
+            Cover topics such as phishing recognition, password security, and social engineering defense.
+
+      - point: Develop Role-Specific Security Guidance
+        priority: Advanced
+        details: >-
+            Create tailored security training for different roles (developers, community managers, executives)
+            that addresses the specific threats and responsibilities relevant to each position.
+
+      - point: Conduct Simulated Phishing Exercises
+        priority: Advanced
+        details: >-
+            Regularly test team members with simulated phishing attempts to measure awareness levels
+            and provide immediate feedback and education when someone falls for a test.
+
+      - point: Create a Security Resource Library
+        priority: Optional
+        details: >-
+            Maintain an accessible repository of security guides, best practices, and incident response
+            procedures that team members can reference when needed.
+
+      # -------------------------------
+      # Communication and Culture
+      # -------------------------------
+      - point: Establish Clear Security Policies
+        priority: Essential
+        details: >-
+            Document and communicate security policies and procedures in clear, accessible language.
+            Ensure all team members understand expectations and consequences for security violations.
+
+      - point: Promote a "No-Blame" Security Culture
+        priority: Essential
+        details: >-
+            Encourage reporting of security incidents and near-misses without fear of punishment.
+            Focus on learning and improvement rather than blame when security issues occur.
+
+      - point: Share Real-World Security Incidents
+        priority: Optional
+        details: >-
+            Regularly share anonymized examples of security incidents from within your organization
+            or from the broader industry to reinforce the reality of threats.
+
+      - point: Recognize Security-Conscious Behavior
+        priority: Optional
+        details: >-
+            Implement recognition programs that reward team members who demonstrate exceptional
+            security awareness or who report potential security issues.
+
+      # -------------------------------
+      # Ongoing Awareness
+      # -------------------------------
+      - point: Maintain a Security Communication Channel
+        priority: Essential
+        details: >-
+            Establish a dedicated channel (Slack, Discord, email) for security announcements, updates,
+            and discussions to keep security top-of-mind.
+
+      - point: Conduct Regular Security Updates
+        priority: Essential
+        details: >-
+            Share regular updates about emerging threats, recent incidents, and evolving best practices
+            to keep the team informed about the changing security landscape.
+
+      - point: Integrate Security into Regular Meetings
+        priority: Optional
+        details: >-
+            Include brief security updates or tips in team meetings to normalize security discussions
+            and reinforce its importance to business operations.
+
+      - point: Measure Security Awareness Effectiveness
+        priority: Advanced
+        details: >-
+            Regularly assess the effectiveness of security awareness initiatives through metrics such as
+            phishing simulation success rates, security incident reporting, and knowledge assessments.
+
+      # -------------------------------
+      # Community and User Awareness
+      # -------------------------------
+      - point: Develop User-Facing Security Resources
+        priority: Essential
+        details: >-
+            Create clear, accessible security guides for users and community members that explain
+            how to protect themselves from common threats in the Web3 ecosystem.
+
+      - point: Implement Security Warnings for High-Risk Actions
+        priority: Essential
+        details: >-
+            Display clear security warnings before users perform high-risk actions such as
+            connecting wallets, approving transactions, or sharing sensitive information.
+
+      - point: Conduct Community Security Workshops
+        priority: Optional
+        details: >-
+            Host regular workshops or AMAs focused on security topics to educate your community
+            and demonstrate your commitment to their safety.
+
+      - point: Create a Security Verification System
+        priority: Advanced
+        details: >-
+            Implement a system for community members to verify official communications and team members
+            to protect against impersonation and social engineering attacks.
+
+  softwareLinks:
+      - title: SANS Security Awareness
+        url: https://www.sans.org/security-awareness-training/
+      - title: Phishing Simulator Tools
+        url: https://www.knowbe4.com/phishing-security-test
+      - title: Security Awareness Materials
+        url: https://www.ncsc.gov.uk/section/keep-up-to-date/ncsc-for-startups
+      - title: Web3 Security Education
+        url: https://consensys.io/blog/blockchain-security

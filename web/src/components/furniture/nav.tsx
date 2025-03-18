@@ -1,4 +1,3 @@
-
 import { $, component$, useContext } from "@builder.io/qwik";
 import Icon from "~/components/core/icon";
 import type { Section } from '~/types/PSC';
@@ -39,8 +38,10 @@ export default component$(() => {
             </label>
           </div> 
           <a href="/" class="btn btn-ghost text-xl flex capitalize">
-            <label for="my-drawer-3" aria-label="open sidebar" class="tooltip tooltip-bottom" data-tip="View all Pages"><Icon class="mr-2" icon="shield" width={28} height={28}  /></label>
-            <h1>Digital Defense</h1>
+            <label for="my-drawer-3" aria-label="open sidebar" class="tooltip tooltip-bottom flex items-center" data-tip="View all Pages">
+              <Icon class="mr-2" icon="seal" width={28} height={28} />
+              <span class="ml-1">All pages</span>
+            </label>
           </a>
         </div>
         <div class="flex-none hidden md:flex">
@@ -97,12 +98,12 @@ export default component$(() => {
       <div class="drawer-side z-10">
         <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label> 
         <ul class="rounded-box menu p-4 w-80 min-h-full bg-base-200">
-          <h2 class="flex text-primary">
-          <Icon class="mr-2" icon="shield" width={16} height={16}  />
-            Digital Defense
+          <h2 class="flex text-primary text-lg">
+          <Icon class="mr-2" icon="seal" width={16} height={16}  />
+            Security Checklist
           </h2>
           <li><a href="/"><Icon class="mr-2" icon="homepage" width={16} height={16}  />Home</a></li>
-          <li><a href="https://github.com/lissy93/personal-security-checklist">
+          <li><a href="https://github.com/securityalliance/frameworks-checklist">
             <Icon class="mr-2" icon="github" width={16} height={16}  />GitHub</a>
           </li>
           <li>
@@ -118,6 +119,7 @@ export default component$(() => {
               ))}
             </ul>
           </li>
+          {/* 
           <li>
             <a href="/article">
               <Icon class="mr-2" icon="articles" width={16} height={16} />Articles
@@ -161,6 +163,7 @@ export default component$(() => {
             </li>
             </ul>
           </li>
+          */}
         </ul>
       </div>
 

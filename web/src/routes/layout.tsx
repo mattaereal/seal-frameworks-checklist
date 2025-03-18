@@ -1,5 +1,5 @@
 import { component$, useContextProvider, Slot } from "@builder.io/qwik";
-import { routeLoader$, type RequestHandler } from "@builder.io/qwik-city";
+import { routeLoader$ } from "@builder.io/qwik-city";
 import jsyaml from "js-yaml";
 
 import yamlContent from "~/assets/checklist.yml?raw";
@@ -12,21 +12,16 @@ export const useChecklists = routeLoader$(async () => {
   return jsyaml.load(yamlContent) as Sections;
 });
 
-export const onGet: RequestHandler = async ({ cacheControl }) => {
-  cacheControl({
-    staleWhileRevalidate: 60 * 60 * 24 * 7,
-    maxAge: 5,
-  });
-};
-
 export default component$(() => {
   const checklists = useChecklists();
+  
+  // Provide the checklist data to all child components
   useContextProvider(ChecklistContext, checklists);
-
+  
   return (
     <>
       <Navbar />
-      <main class="bg-base-100 min-h-full">
+      <main>
         <Slot />
       </main>
       <Footer />

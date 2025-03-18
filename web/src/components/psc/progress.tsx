@@ -323,15 +323,13 @@ export default component$(() => {
         </div>
         ))}
       </div>
-      {/* Something ??? */}
+      {/* Frameworks plug */}
       <div class="p-4 rounded-box bg-front shadow-md w-96 flex-grow">
         <p class="text-sm opacity-80 mb-2">
-          Next up, consider switching to more secure and
-          privacy-respecting apps and services.
+          This is a very summarized version of the original source of information. You can see the full list of frameworks under development <a class="link link-secondary font-bold" href="https://frameworks.securityalliance.dev">here</a>.
         </p>
         <p class="text-lg">
-          View our directory of recommended software,
-          at <a class="link link-secondary font-bold" href="https://awesome-privacy.xyz">awesome-privacy.xyz</a>
+          Check out the original source of information at <a class="link link-secondary font-bold" href="https://frameworks.securityalliance.org">Security Frameworks</a>
         </p>
       </div>
     </div>
@@ -361,8 +359,11 @@ export default component$(() => {
                 </p>
                 <div class="progress w-36">
                   <span 
-                    class={`block h-full transition bg-${section.color}-400`}
-                    style={`width: ${sectionCompletion.value[index] || 0}%;`}></span>
+                    class="block h-full transition"
+                    style={`
+                      width: ${sectionCompletion.value[index] || 0}%; 
+                      background-color: ${getColorForSection(section.color)};
+                    `}></span>
                 </div>
                 </a>
               </li>
@@ -373,4 +374,89 @@ export default component$(() => {
   </div>
   );
 });
+
+// Add this comprehensive color mapping function at the top of your component
+function getColorForSection(color: string): string {
+  // Full set of Tailwind colors (using the 500 shade as default)
+  const colorMap: Record<string, string> = {
+    // Base colors
+    slate: '#64748b',
+    gray: '#6b7280',
+    zinc: '#71717a',
+    neutral: '#737373',
+    stone: '#78716c',
+    red: '#ef4444',
+    orange: '#f97316',
+    amber: '#f59e0b',
+    yellow: '#eab308',
+    lime: '#84cc16',
+    green: '#22c55e',
+    emerald: '#10b981',
+    teal: '#14b8a6',
+    cyan: '#06b6d4',
+    sky: '#0ea5e9',
+    blue: '#3b82f6',
+    indigo: '#6366f1',
+    violet: '#8b5cf6',
+    purple: '#a855f7',
+    fuchsia: '#d946ef',
+    pink: '#ec4899',
+    rose: '#f43f5e',
+    
+    // Add any custom colors your app might use
+    primary: '#6419e6', // Your app's primary color
+  };
+  
+  // Check if the color includes a variant (like blue-400)
+  if (color.includes('-')) {
+    const [baseName, shade] = color.split('-');
+    const baseColor = colorMap[baseName];
+    
+    if (baseColor) {
+      // Adjust transparency based on shade
+      // This is a simple approximation - actual Tailwind variants would be more precise
+      const opacity = getOpacityForShade(shade);
+      return adjustColorOpacity(baseColor, opacity);
+    }
+  }
+  
+  // Return the mapped color or a default if not found
+  return colorMap[color] || '#6419e6'; // Default to primary color
+}
+
+// Helper function to approximate shade opacity
+function getOpacityForShade(shade: string): number {
+  const shadeMap: Record<string, number> = {
+    '50': 0.1,
+    '100': 0.2,
+    '200': 0.3,
+    '300': 0.4,
+    '400': 0.6,
+    '500': 0.8,
+    '600': 0.9,
+    '700': 0.95,
+    '800': 0.98,
+    '900': 1,
+    '950': 1
+  };
+  
+  return shadeMap[shade] || 0.8; // Default to 500 shade
+}
+
+// Helper function to adjust color opacity
+function adjustColorOpacity(hexColor: string, opacity: number): string {
+  // Convert hex to rgb
+  const r = parseInt(hexColor.slice(1, 3), 16);
+  const g = parseInt(hexColor.slice(3, 5), 16);
+  const b = parseInt(hexColor.slice(5, 7), 16);
+  
+  // Make darker for lower opacities (approximating Tailwind's approach)
+  const factor = 0.8 + (0.2 * opacity);
+  const adjustedR = Math.round(r * factor);
+  const adjustedG = Math.round(g * factor);
+  const adjustedB = Math.round(b * factor);
+  
+  // Convert back to hex
+  return `#${adjustedR.toString(16).padStart(2, '0')}${adjustedG.toString(16).padStart(2, '0')}${adjustedB.toString(16).padStart(2, '0')}`;
+}
 

@@ -1,5 +1,4 @@
 import { useDocumentHead, useLocation } from "@builder.io/qwik-city";
-
 import { component$ } from "@builder.io/qwik";
 
 export const RouterHead = component$(() => {
@@ -9,8 +8,8 @@ export const RouterHead = component$(() => {
   return (
     <>
       {/* Basics */}
-      <title>{head.title || 'Digital Defense - The ultimate personal security checklist to secure your digital life'}</title>
-      <meta name="description" content="The ultimate personal security checklist to secure your digital life" />
+      <title>{head.title || 'Security Frameworks Checklist'}</title>
+      <meta name="description" content="A security checklist to help you keep track of your security frameworks." />
       
       {/* Site config */}
       <link rel="canonical" href={loc.url.href} />
@@ -23,15 +22,15 @@ export const RouterHead = component$(() => {
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={loc.url.href} />
-      <meta property="og:title" content="Digital Defense - The ultimate personal security checklist to secure your digital life" />
-      <meta property="og:description" content="The ultimate personal security checklist to secure your digital life" />
+      <meta property="og:title" content="Security Frameworks Checklist" />
+      <meta property="og:description" content="A security checklist to help you keep track of your security frameworks." />
       <meta property="og:image" content="/banner.png" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={loc.url.href} />
-      <meta name="twitter:title" content="Digital Defense - The ultimate personal security checklist to secure your digital life" />
-      <meta name="twitter:description" content="The ultimate personal security checklist to secure your digital life" />
+      <meta name="twitter:title" content="Security Frameworks Checklist" />
+      <meta name="twitter:description" content="A security checklist to help you keep track of your security frameworks." />
       <meta name="twitter:image" content="/banner.png" />
 
       {head.meta.map((m) => (

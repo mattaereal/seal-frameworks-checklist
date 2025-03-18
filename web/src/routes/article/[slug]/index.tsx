@@ -113,7 +113,7 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Article | Digital Defense",
+  title: "Article | Security Frameworks Checklist",
   meta: [
     {
       name: "description",

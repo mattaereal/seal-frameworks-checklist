@@ -6,29 +6,27 @@ import SectionLinkGrid from "~/components/psc/section-link-grid";
 import Progress from "~/components/psc/progress";
 
 import { ChecklistContext } from '~/store/checklist-context';
-
 import { useChecklist } from '~/store/local-checklist-store';
 
 export default component$(() => { 
   const checklists = useContext(ChecklistContext);
-
   const localChecklist = useChecklist();
 
   return (
     <>
       <Hero />
       <Progress />
-      <SectionLinkGrid sections={localChecklist.checklist.checklist || checklists.value} />
+      <SectionLinkGrid sections={checklists.value} />
     </>
   );
 });
 
 export const head: DocumentHead = {
-  title: "Digital Defense",
+  title: "Security Frameworks Checklist",
   meta: [
     {
       name: "description",
-      content: "The ultimate personal security checklist, for securing your digital life.",
+      content: "A security checklist to help you keep track of your security frameworks.",
     },
   ],
 };

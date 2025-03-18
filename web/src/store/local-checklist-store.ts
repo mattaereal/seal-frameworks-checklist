@@ -1,25 +1,15 @@
-
-import { $, useStore, useOnWindow } from '@builder.io/qwik';
-import jsyaml from 'js-yaml';
+import { $, useStore, useContext } from '@builder.io/qwik';
 import type { Sections } from '~/types/PSC';
+import { ChecklistContext } from '~/store/checklist-context';
 
 export const useChecklist = () => {
-  const state = useStore<{ checklist: Sections | null }>({ checklist: null });
-
-  const fetchChecklist = $(async () => {
-    const localUrl = '/personal-security-checklist.yml';
-    return fetch(localUrl)
-      .then((res) => res.text())
-      .then((yamlText) => {
-        return jsyaml.load(yamlText);
-      });
+  // Get the data that was already loaded by the route loader
+  const contextChecklist = useContext(ChecklistContext);
+  
+  // Initialize with the context data
+  const state = useStore<{ checklist: Sections | null }>({ 
+    checklist: contextChecklist.value 
   });
-
-  useOnWindow('load', $(() => {
-    fetchChecklist().then((checklist) => {
-      state.checklist = checklist as Sections;
-    });
-  }));
 
   const setChecklist = $((newChecklist: Sections) => {
     state.checklist = newChecklist;
