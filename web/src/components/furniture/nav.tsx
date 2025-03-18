@@ -2,7 +2,6 @@ import { $, component$, useContext } from "@builder.io/qwik";
 import Icon from "~/components/core/icon";
 import type { Section } from '~/types/PSC';
 import { useTheme } from '~/store/theme-store';
-import articles from '~/data/articles';
 import { ChecklistContext } from '~/store/checklist-context';
 
 
