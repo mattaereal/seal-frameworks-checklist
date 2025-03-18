@@ -39,9 +39,9 @@ export default component$(() => {
           </div> 
           <a href="/" class="btn btn-ghost text-xl flex capitalize">
             <label for="my-drawer-3" aria-label="open sidebar" class="tooltip tooltip-bottom flex items-center" data-tip="View all Pages">
-              <Icon class="mr-2" icon="seal" width={28} height={28} />
-              <span class="ml-1">All pages</span>
+              <Icon class="mr-2" icon="fold" width={28} height={28} />
             </label>
+            <span class="ml-1">Home</span>
           </a>
         </div>
         <div class="flex-none hidden md:flex">
@@ -65,7 +65,7 @@ export default component$(() => {
               </details>
             </li>
             <li>
-              <a href="https://github.com/lissy93/personal-security-checklist"
+              <a href="https://github.com/securityalliance/frameworks-checklist"
                 class="tooltip flex tooltip-bottom" data-tip="View / Edit Source & Data">
                 <Icon icon="github" width={16} height={16}  />GitHub
               </a>
@@ -99,7 +99,7 @@ export default component$(() => {
         <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label> 
         <ul class="rounded-box menu p-4 w-80 min-h-full bg-base-200">
           <h2 class="flex text-primary text-lg">
-          <Icon class="mr-2" icon="seal" width={16} height={16}  />
+          <Icon class="mr-2 mt-1" icon="seal" width={16} height={16}  />
             Security Checklist
           </h2>
           <li><a href="/"><Icon class="mr-2" icon="homepage" width={16} height={16}  />Home</a></li>
