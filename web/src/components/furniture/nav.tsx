@@ -119,23 +119,8 @@ export default component$(() => {
               ))}
             </ul>
           </li>
-          {/* 
           <li>
-            <a href="/article">
-              <Icon class="mr-2" icon="articles" width={16} height={16} />Articles
-            </a>
-            <ul>
-              {articles.map(article => (
-                <li key={article.slug}>
-                  <a href={`/article/${article.slug}`}>{article.title}</a>
-                </li>
-              ))}
-            </ul>
-          </li>
-          <li>
-            <a href="/about">
-              <Icon class="mr-2" icon="about" width={16} height={16} />About
-            </a>
+            <a href="/about"><Icon class="mr-2" icon="about" width={16} height={16} />About</a>
             <ul>
               <li>
                 <a href="https://github.com/Lissy93/personal-security-checklist/?tab=readme-ov-file#contributing">Contributing</a>
@@ -144,28 +129,10 @@ export default component$(() => {
                 <a href="https://github.com/Lissy93/personal-security-checklist/blob/master/LICENSE">License</a>
               </li>
             </ul>
-            <ul>
-            <li>
-              <a href="/about#author">Author</a>
-              <ul>
-                <li><a href="https://aliciasykes.com/contact">Contact</a></li>
-                <li>
-                  <a href="https://apps.aliciasykes.com">More Apps</a>
-                </li>
-                <li class="flex flex-row">
-                  <a href="https://github.com/lissy93"><Icon icon="hub" width={16} height={16} /></a>
-                  <a href="https://x.com/lissy_sykes"><Icon icon="twitter" width={16} height={16} /></a>
-                  <a href="https://mastodon.social/@lissy93"><Icon icon="mastodon" width={16} height={16} /></a>
-                  <a href="https://dev.to/lissy93"><Icon icon="dev" width={16} height={16} /></a>
-                  <a href="https://linkedin.com/in/aliciasykes"><Icon icon="linkedin" width={16} height={16} /></a>
-                </li>
-              </ul>
-            </li>
-            </ul>
           </li>
-          */}
         </ul>
       </div>
+
 
       <dialog id="settings_modal" class="modal">
         <div class="modal-box">
