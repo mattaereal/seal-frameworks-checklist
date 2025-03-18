@@ -148,8 +148,8 @@ export default component$((props: { section: Section }) => {
     <>
 
     <div class="flex flex-wrap justify-between items-center">
-      <div>
-        <progress class="progress w-64" value={percent} max="100"></progress>
+      <div class="w-72">
+        <progress class="progress w-full" value={percent} max="100"></progress>
         <p class="text-xs text-center">
           {done} out of {total} ({percent}%)
           complete, {disabled} ignored</p>

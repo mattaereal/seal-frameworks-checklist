@@ -348,23 +348,29 @@ export default component$(() => {
                 <a
                   href={`/checklist/${section.slug}`}
                   class={[
-                    'my-2 w-80 flex justify-between items-center tooltip transition',
+                    'my-2 flex justify-between items-center tooltip transition',
                     `hover:text-${section.color}-400`
                   ]}
                   data-tip={`Completed ${sectionCompletion.value[index]}% of ${section.checklist.length} items.`}
                 >
-                <p class="text-sm m-0 flex items-center text-left gap-1 text-nowrap overflow-hidden max-w-40">
-                  <Icon icon={section.icon} width={14} />
-                  {section.title}
-                </p>
-                <div class="progress w-36">
-                  <span 
-                    class="block h-full transition"
-                    style={`
-                      width: ${sectionCompletion.value[index] || 0}%; 
-                      background-color: ${getColorForSection(section.color)};
-                    `}></span>
-                </div>
+                  {/* Title with fixed width */}
+                  <div class="flex items-center gap-1 w-[180px]">
+                    <span class="w-5 flex justify-center">
+                      <Icon icon={section.icon} width={14} />
+                    </span>
+                    <span class="text-sm truncate">{section.title}</span>
+                  </div>
+                  
+                  {/* Custom progress bar with consistent sizing */}
+                  <div class="bg-gray-200 bg-opacity-20 rounded-full h-2 w-36 overflow-hidden">
+                    <div 
+                      class="h-full transition-all duration-300"
+                      style={`
+                        width: ${sectionCompletion.value[index] || 0}%; 
+                        background-color: ${getColorForSection(section.color)};
+                      `}>
+                    </div>
+                  </div>
                 </a>
               </li>
           ))}

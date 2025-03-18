@@ -1,10 +1,10 @@
 # ===================================================================
 #  1. Community Management
 # ===================================================================
-- title: Community Management
+- title: Community Mgmt
   slug: community-management
   description: Protecting online communities from security threats
-  icon: social
+  icon: community
   color: orange
   intro: >-
       Communities are at the heart of many Web3 projects, but they also present significant security risks. 
@@ -159,7 +159,7 @@
 - title: Security Awareness
   slug: security-awareness
   description: Building a security-conscious culture through education and training
-  icon: human
+  icon: awareness
   color: teal
   intro: >-
       Security awareness is a critical component of any comprehensive security strategy. 
